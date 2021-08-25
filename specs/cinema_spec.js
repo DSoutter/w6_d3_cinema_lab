@@ -33,13 +33,17 @@ describe('Cinema', function () {
     const expected = ['Moonlight', 'Blade Runner 2049', 'Dunkirk', 'Black Panther', 'T2 Trainspotting']
     assert.deepStrictEqual(actual, expected)
   });
+
   it('should be able to find a film by title', function(){
     const actual = cinema.findTitle(films, 'Dunkirk')
-    const expected = Film('Dunkirk', 'history', 2017, 96);
+    const expected = cinema.dunkirk;
     assert.deepStrictEqual(actual, expected)
     
   });
-  it('should be able to filter films by genre');
+  it('should be able to filter films by genre', function(){
+    const actual = cinema.findGenre(films, 'drama')
+    const expected= [moonlight,trainspotting]
+  });
   it('should be able to check whether there are some films from a particular year');
   it('should be able to check whether there are no films from a particular year');
   it('should be able to check whether all films are over a particular length');
