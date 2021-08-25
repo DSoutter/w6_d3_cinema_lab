@@ -37,4 +37,12 @@ Cinema.prototype.findByRuntime= function(films, runtime) {
   return filmRuntimeResult;
 }
 
+Cinema.prototype.totalRuntime = function(films) {
+  const runtimeResult = this.films.reduce((runningTotal, currentFilm) => {
+    return runningTotal + currentFilm.length
+  }, 0)
+
+  return runtimeResult
+}
+
 module.exports = Cinema;
