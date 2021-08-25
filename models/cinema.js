@@ -17,10 +17,17 @@ Cinema.prototype.findTitle = function (films, title) {
 }
 
 Cinema.prototype.findGenre = function (films, genre) {
-  const filmResult = this.films.filter((film) => {
+  const filmGenreResult = this.films.filter((film) => {
     return film.genre === genre;
   })
-  return filmResult
+  return filmGenreResult
+}
+
+Cinema.prototype.findByYear = function (films, year) {
+  const filmYearResult = this.films.filter((film) => {
+    return film.year === year;
+  })
+  return filmYearResult
 }
 
 module.exports = Cinema;
