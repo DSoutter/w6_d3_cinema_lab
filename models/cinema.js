@@ -30,4 +30,11 @@ Cinema.prototype.findByYear = function (films, year) {
   return filmYearResult
 }
 
+Cinema.prototype.findByRuntime= function(films, runtime) {
+  const filmRuntimeResult = this.films.filter((film) => {
+    return film.length >= runtime;
+  })
+  return filmRuntimeResult;
+}
+
 module.exports = Cinema;
